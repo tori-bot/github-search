@@ -13,13 +13,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
+import { ReposComponent } from './components/repos/repos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SearchFormComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    ReposComponent
   ],
   imports: [
     BrowserModule,
