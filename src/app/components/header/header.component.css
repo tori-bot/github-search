@@ -1,3 +1,17 @@
 #title{
+    margin: 7vh 3vw;
+    font-weight: 800;
+    font-style: oblique;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+img{
+    border: solid 3px;
+    border-radius: 10px;
+    margin: 5vh 5vw;
     
 }
