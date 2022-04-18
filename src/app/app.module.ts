@@ -14,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { ReposComponent } from './components/repos/repos.component';
 import { UserComponent } from './components/user/user.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UserComponent } from './components/user/user.component';
     HeaderComponent,
     SearchFormComponent,
     ReposComponent,
-    UserComponent
+    UserComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
