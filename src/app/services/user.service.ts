@@ -20,7 +20,7 @@ export class UserService {
       name: '';
       bio: '';
       url: '';
-      avatar: '';
+      avatar_url: '';
       email: '';
       public_repos: number;
       following: number;
