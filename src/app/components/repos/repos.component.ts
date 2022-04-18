@@ -10,25 +10,36 @@ import { Repository } from 'src/app/classes/repository';
   styleUrls: ['./repos.component.css']
 })
 export class ReposComponent implements OnInit {
-  repository!: Repository;
+  repositories:any[]= [];
 
   constructor(public getResultsService: GetResultsService) { }
-  
-  searchRepo(searchedUser:any) {
-    this.getResultsService.getUserRepos(searchedUser)
-      .then(
-        (result) => {
-          this.repository = this.getResultsService.repos;
-          console.log(this.repository);
-          
-        }
-    );
-    this.repository = this.getResultsService.repos;
-  console.log(this.repository);
-   }
 
   ngOnInit(): void {
-    this.searchRepo('tori-bot')
+    // this.searchRepo('tori-bot')
   }
+  
+  searchRepo(searchedUser: any) {
+    this.getResultsService.getUserRepos(searchedUser).subscribe((response: any) => {
+      console.log(response);
+      this.repositories = response.data;
+      
+    },
+      error => {
+        alert('Oops! Not found.')
+      })
+  }
+    //     .then(
+    //       (result) => {
+    //         this.repository = this.getResultsService.repos;
+    //         console.log(this.repository);
+          
+    //       }
+    //   );
+    //   this.repository = this.getResultsService.repos;
+    // console.log(this.repository);
+    //  }
 
+    // ngOnInit(): void {
+    //   // this.searchRepo('tori-bot')
+  // }
 }
