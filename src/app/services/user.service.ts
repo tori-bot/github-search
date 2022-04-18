@@ -10,7 +10,11 @@ export class UserService {
   currentUser: User;
 
 
-  constructor(searchedUser: string) {
+  constructor(private http: HttpClient) {
+    this.currentUser=new User('','','','','','',0,0,0,new Date)
+  }
+
+  searchUser(searchedUser: string) {
     interface UserApiResponse{
       login: '';
       name: '';
@@ -25,7 +29,7 @@ export class UserService {
     }
 
     return new Promise(((resolve, reject) => {
-      this.http.get<UserApiResponse>('https://api.github.com/users/' + searchedUser + '?access_token=' + environment.apiKey).tpPromise().then(
+      this.http.get<UserApiResponse>('https://api.github.com/users/' + searchedUser + '?access_token=' + environment.apiKey).toPromise().then(
         (result) => {
           this.currentUser = result;
           resolve(result);
