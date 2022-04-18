@@ -1,21 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { User } from '../classes/user';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  // currentUser: User;
 
 
-  constructor(private http: HttpClient) {
-    // this.currentUser=new User('','','','','','',0,0,0,new Date)
-  }
+  constructor(private http: HttpClient) { }
 
   searchUser(searchedUser: string) {
-    interface UserApiResponse{
+    interface UserApiResponse {
       login: '';
       name: '';
       bio: '';
@@ -27,18 +23,34 @@ export class UserService {
       followers: number;
       created_at: Date;
     }
-    return this.http.get<UserApiResponse>('https://api.github.com/users/' + searchedUser + '?access_token=' + environment.apiKey)
+    
 
-    // return new Promise(((resolve, reject) => {
-    //   this.http.get<UserApiResponse>('https://api.github.com/users/' + searchedUser + '?access_token=' + environment.apiKey).toPromise().then(
-    //     (result) => {
-    //       this.currentUser = result;
-    //       resolve(result);
-    //     },
-    //     error => {
-    //       console.log(this.currentUser);
-    //       reject(error);
-    //     });
-    // }));
+    return new Promise((resolve) => {
+      resolve(
+        this.http.get<UserApiResponse>(environment.GitHubAPIUrl + searchedUser + '?access_token=' + environment.apiKey).toPromise())
+    })
+      
+    // userRepos(searchedUser: string){
+    //   interface Repos {
+    //     name: string;
+    //     html_url: string;
+    //     description: string;
+    //     language: string;
+    //     created_at: Date;
+    //     forks: number;
+    //   }
+
+    //   return new Promise((resolve) => {
+    //     resolve(
+    //       this.http.get<Repos>(environment.GitHubAPIUrl + searchedUser + '?access_token=' + environment.apiKey).toPromise())
+    //   }) 
+
+
+      
+    // }
   }
 }
+    
+
+
+    

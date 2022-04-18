@@ -13,9 +13,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
-import { ReposComponent } from './components/repos/repos.component';
-import { UserComponent } from './components/user/user.component';
+
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { UsersComponent } from './components/users/users.component';
 
 
 @NgModule({
@@ -23,9 +23,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AppComponent,
     HeaderComponent,
     SearchFormComponent,
-    ReposComponent,
-    UserComponent,
-    NotFoundComponent
+    
+    NotFoundComponent,
+         UsersComponent
   ],
   imports: [
     BrowserModule,
