@@ -21,6 +21,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ReposComponent } from './components/repos/repos.component';
 import { AboutComponent } from './components/about/about.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { CreatedAtPipe } from './pipes/created-at.pipe';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { HighlightDirective } from './directives/highlight.directive';
          NavbarComponent,
          ReposComponent,
          AboutComponent,
-         HighlightDirective
+         HighlightDirective,
+         CreatedAtPipe
   ],
   imports: [
     BrowserModule,
