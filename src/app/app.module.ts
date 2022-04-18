@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { SearchFormComponent } from './components/search-form/search-form.compon
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UsersComponent } from './components/users/users.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ReposComponent } from './components/repos/repos.component';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     
     NotFoundComponent,
          UsersComponent,
-         NavbarComponent
+         NavbarComponent,
+         ReposComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatSidenavModule
 
   ],
   providers: [

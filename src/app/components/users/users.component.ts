@@ -14,15 +14,15 @@ export class UsersComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  showUsers(searchQuery: any) {
-    this.userService.searchUser(searchQuery).then((response:any) =>{
-      console.log(response)
-      this.users = response.data;
-      // catching errors
-    },err =>{
-      alert('User not found')
-    }
-    )
-  }
+  // showUsers(searchQuery: any) {
+  //   this.userService.usersRequest(userName).then((response:any) =>{
+  //     console.log(response)
+  //     this.users = response.data;
+  //     // catching errors
+  //   },(err:any) =>{
+  //     alert('User not found')
+  //   }
+  //   )
+  // }
 
 }
