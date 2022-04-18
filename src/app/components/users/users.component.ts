@@ -1,3 +1,4 @@
+import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
+  users:any[]=[]
 
-  constructor() { }
+  constructor(private userService:UserService) { }
 
   ngOnInit(): void {
+  }
+
+  showUsers(searchQuery: any) {
+    this.userService.searchUser(searchQuery).then((response:any) =>{
+      console.log(response)
+      this.users = response.data;
+      // catching errors
+    },err =>{
+      alert('User not found')
+    }
+    )
   }
 
 }
