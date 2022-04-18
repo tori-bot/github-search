@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
-import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { ReposComponent } from './components/repos/repos.component';
 import { UserComponent } from './components/user/user.component';
 
@@ -21,7 +20,6 @@ import { UserComponent } from './components/user/user.component';
     AppComponent,
     HeaderComponent,
     SearchFormComponent,
-    MyProfileComponent,
     ReposComponent,
     UserComponent
   ],
