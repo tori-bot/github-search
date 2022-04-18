@@ -5,8 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CreatedAtPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: any):any {
+    let today: Date = new Date();
+    return new Date(today.getFullYear(), today.getMonth(),today.getDate());
   }
 
 }
