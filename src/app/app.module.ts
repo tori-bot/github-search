@@ -20,6 +20,7 @@ import { UsersComponent } from './components/users/users.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ReposComponent } from './components/repos/repos.component';
 import { AboutComponent } from './components/about/about.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { AboutComponent } from './components/about/about.component';
          UsersComponent,
          NavbarComponent,
          ReposComponent,
-         AboutComponent
+         AboutComponent,
+         HighlightDirective
   ],
   imports: [
     BrowserModule,
