@@ -16,6 +16,7 @@ import { SearchFormComponent } from './components/search-form/search-form.compon
 
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UsersComponent } from './components/users/users.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { UsersComponent } from './components/users/users.component';
     SearchFormComponent,
     
     NotFoundComponent,
-         UsersComponent
+         UsersComponent,
+         NavbarComponent
   ],
   imports: [
     BrowserModule,

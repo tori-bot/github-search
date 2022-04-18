@@ -1,1 +1,25 @@
-<p>users works!</p>
+<form>
+    <mat-form-field id="form" appearance="fill">
+      <mat-label>Search</mat-label>
+      <input matInput type="search" />
+    </mat-form-field>
+    <button mat-raised-button color="primary"
+    type="submit" #user (click)="showUsers(users)">
+      <mat-icon>search</mat-icon>
+    </button>
+  </form>
+
+  <div class="row">
+      <div class="col-md-4" *ngFor='let user of users'>
+          <h2>{{user.name}} </h2>
+          <p>{{user.bio}} </p>
+          <p>{{user.email}} </p>
+          <p>{{user.public_repos}} </p>
+          <p>{{user.forks}} </p>
+          <p>{{user.followers}} </p>
+          <p>{{user.following}} </p>
+
+      </div>
+  </div>
+
+  

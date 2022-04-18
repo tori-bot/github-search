@@ -1,9 +1,10 @@
-<form>
+<!-- <form #form='ngForm' (submit)='showUsers()'>
   <mat-form-field id="form" appearance="fill">
     <mat-label>Search</mat-label>
-    <input matInput />
+    <input matInput type="search" name="search" #search="ngModel" [(ngModel)]="searchQuery"/>
   </mat-form-field>
-  <button mat-raised-button color="primary">
+  <button mat-raised-button color="primary"
+  type="submit">
     <mat-icon>search</mat-icon>
   </button>
-</form>
+</form> -->
