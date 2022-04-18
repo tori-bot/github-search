@@ -19,6 +19,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UsersComponent } from './components/users/users.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ReposComponent } from './components/repos/repos.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ReposComponent } from './components/repos/repos.component';
     NotFoundComponent,
          UsersComponent,
          NavbarComponent,
-         ReposComponent
+         ReposComponent,
+         AboutComponent
   ],
   imports: [
     BrowserModule,
