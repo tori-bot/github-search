@@ -4,7 +4,7 @@
     <mat-form-field id="form" appearance="fill">
       <mat-label>Search</mat-label>
       <input required matInput name="search" type="search" #search='ngModel' [(ngModel)]='user' />
-    </mat-form-field>
+    </mat-form-field><br>
     <button mat-raised-button color="primary"
     type="submit">
       <mat-icon>search</mat-icon>
@@ -12,16 +12,20 @@
   </form>
 
   <div class="row">
-      <div class="col-nd-4" *ngFor='let repo of repositories'>
-          <div class="card">
-              <h2 class="card-title">{{repo.name}} </h2>
-              <div class="card-body">
-                 <p>{{repo.description}}</p> 
-                  <p>{{repo.language}}</p>
-                  <p>{{repo.forks}}</p>
-                  <p>{{repo.created_at |createdAt}}</p>
+      <div class="card col-md-4" *ngFor='let repo of repositories'>
+          <mat-card>
+            <mat-card-title>{{repo.name}}</mat-card-title>
+            <mat-card-subtitle>{{repo.language}}</mat-card-subtitle>
+
+              <mat-card-content>
+                <p>{{repo.description}}</p> 
                   
-              </div>
-          </div>
-      </div>
+                  <p>Forks: {{repo.forks}}</p>
+                  <p>Created on: {{repo.created_at |createdAt}}</p>
+                </mat-card-content>
+          </mat-card>
+              
+                 
+          
   </div>
+         

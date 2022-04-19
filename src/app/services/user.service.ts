@@ -19,7 +19,7 @@ export class UserService {
       login: string,
       avatar_url: string,
       bio: string,
-      email: string,
+      email: any,
       followers: number,
       following: number,
       created_at: Date,

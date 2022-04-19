@@ -1,6 +1,8 @@
 
 <!-- <app-search-form></app-search-form> -->
 
+
+
 <form #form='ngForm' (submit)='showUsers()' >
     <mat-form-field id="form" appearance="fill">
       <mat-label>Search</mat-label>
@@ -13,18 +15,29 @@
   </form>
 
   <div class="row" [hidden]="searchResult">
-      <div class="col-md-4"  >
-          <img src="{{moreDetails.avatar_url}} " alt="profile">
-          <h2>name: {{moreDetails.name}} </h2>
-          <h3>username: {{moreDetails.login}} </h3>
-          <p>bio: {{moreDetails.bio}} </p>
-          <p>email: {{moreDetails.email}} </p>
-          <p>Repos: {{moreDetails.public_repos}} </p>
-          <p>forks: {{moreDetails.forks}} </p>
-          <p>followers: {{moreDetails.followers}} </p>
-          <p>following: {{moreDetails.following}} </p>
-
+   <div class="col-md-6" >
+  <img src="{{moreDetails.avatar_url}} " alt="profile">
+  </div> 
+  <div class="col-md-6"  >
+        <mat-card>
+          <mat-card-title>name: {{moreDetails.name}}</mat-card-title>
+              <mat-card-subtitle>username: {{moreDetails.login}} </mat-card-subtitle>
+              <mat-card-content>
+                  <p>bio: {{moreDetails.bio}} </p>
+  
+  <p>Repos:{{moreDetails.public_repos}} </p><p>followers: {{moreDetails.followers}} </p>
+  <p>following: {{moreDetails.following}} </p></mat-card-content>
+ 
+  
+  <a href="https://github.com/"+moreDetails.login><button id="git" mat-raised-button color="primary">On Github</button></a>
+      </mat-card>
       </div>
   </div>
+
+
+  
+
+  
+      
 
   

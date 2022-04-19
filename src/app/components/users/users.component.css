@@ -1,0 +1,28 @@
+form{
+    float: right;
+    margin-right: 3vw;
+}
+
+button{
+    margin-left: 5vw;
+}
+img{
+    border: solid white 2px;
+    border-radius: 5px; 
+     margin-top: 13vh;
+    margin-left: 5vw;
+    
+    }
+    
+    
+    
+    mat-card{
+        margin-top: 25vh;
+        margin-left: 10vw;
+        text-align: center;
+        padding: 6vh 4vw;
+    }
+    #git{
+        margin-left: -2vw;
+        margin-right: -3vw;
+    }

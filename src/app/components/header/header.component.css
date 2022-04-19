@@ -8,14 +8,17 @@
 h3{
     text-align: center;
 }
+.content{
+    margin-left: 17vw;
+    margin-top: 28vh;
+}
 
 img{
-    border: solid 3px;
-    border-radius: 10px;
-    margin: 5vh 5vw;
+    width: 60vw;
+    height: 100vh;
     
 }
 
 button{
-    
+    margin: 10vh 34vw;
 }
