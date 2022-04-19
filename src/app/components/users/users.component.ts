@@ -7,22 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  users:any[]=[]
+  user: any
+  moreDetails:any=[]
 
   constructor(private userService:UserService) { }
 
-  ngOnInit(): void {
+ 
+
+  showUsers() {
+    this.userService.usersRequest(this.user).then((response: any) => {
+      console.log(response)
+      this.moreDetails = response.data;
+      // catching errors
+    }, err => {
+      alert('User not found')
+    })
+  }
+     ngOnInit(): void {
+  }
+    
   }
 
-  // showUsers(searchQuery: any) {
-  //   this.userService.usersRequest(userName).then((response:any) =>{
-  //     console.log(response)
-  //     this.users = response.data;
-  //     // catching errors
-  //   },(err:any) =>{
-  //     alert('User not found')
-  //   }
-  //   )
-  // }
 
-}

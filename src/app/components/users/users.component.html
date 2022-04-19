@@ -1,23 +1,16 @@
-<!-- <form>
-    <mat-form-field id="form" appearance="fill">
-      <mat-label>Search</mat-label>
-      <input matInput type="search" />
-    </mat-form-field>
-    <button mat-raised-button color="primary"
-    type="submit">
-      <mat-icon>search</mat-icon>
-    </button>
-  </form> -->
 
+<app-search-form></app-search-form>
   <div class="row">
-      <div class="col-md-4" *ngFor='let user of users'>
-          <h2>{{user.name}} </h2>
-          <p>{{user.bio}} </p>
-          <p>{{user.email}} </p>
-          <p>{{user.public_repos}} </p>
-          <p>{{user.forks}} </p>
-          <p>{{user.followers}} </p>
-          <p>{{user.following}} </p>
+      <div class="col-md-4" >
+          <img src="{{moreDetails.avatar_url}} " alt="profile">
+          <h2>name: {{moreDetails.name}} </h2>
+          <h3>username: {{moreDetails.login}} </h3>
+          <p>bio: {{moreDetails.bio}} </p>
+          <p>email: {{moreDetails.email}} </p>
+          <p>Repos: {{moreDetails.public_repos}} </p>
+          <p>forks: {{moreDetails.forks}} </p>
+          <p>followers: {{moreDetails.followers}} </p>
+          <p>following: {{moreDetails.following}} </p>
 
       </div>
   </div>
