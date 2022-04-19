@@ -1,7 +1,26 @@
 # GithubSearch
 
+# Author- Victoria Makena
+
 [screenshot](src/assets/images/Screenshot_2022-04-19_09-42-07.png)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
+
+## Description
+This is an application that you can use to search the github database for users and repos.It uses a github api.
+
+## Live link
+https://github-googler.netlify.app/
+
+## Technologies used
+HTML/CSS
+Typescript
+Javascript
+
+## How to set up
+* clone this repository
+* add it to your local machine using git clone <repo address>
+* install angular cli, node and other listed dependencies.
+* customize app as you wish
 
 ## Development server
 
@@ -26,3 +45,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  
+  ## License information
+this project is protected under the [MIT license](license)
+
+## Contact author
+Contact via email: makenavictoria1@gmail.com
