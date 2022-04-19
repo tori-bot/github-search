@@ -29,7 +29,7 @@ export class UserService {
     
     return new Promise((resolve, reject) => {
       resolve(
-        this.http.get<ApiResponse>(`${environment.apiUrl}/users/${username}??access_token=${environment.apiKey}`).toPromise())
+        this.http.get<ApiResponse>(`https://api.github.com/users/${username}??access_token=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`).toPromise())
     })
   }
 
