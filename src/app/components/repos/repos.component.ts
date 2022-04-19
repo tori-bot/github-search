@@ -15,7 +15,7 @@ export class ReposComponent implements OnInit {
   getRepos() {
     this.userService.userRepos(this.user).then((response)=> {
       this.repositories=response
-    }, err=>alert('Oops! User not found'))
+    }, err=>alert('Oops! Repo not found'))
   }
 
 

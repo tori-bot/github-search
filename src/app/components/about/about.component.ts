@@ -7,23 +7,22 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  user: any
+  user: string='tori-bot'
   moreDetails:any=[]
 
   constructor(private userService:UserService) { }
 
  
 
-  showUsers() {
+  
+  ngOnInit(): void {
     this.userService.usersRequest(this.user).then((response: any) => {
       console.log(response)
-      this.moreDetails = response.data;
+      this.moreDetails = response;
       // catching errors
     }, err => {
       alert('User not found')
     })
-  }
-     ngOnInit(): void {
   }
     
   }
