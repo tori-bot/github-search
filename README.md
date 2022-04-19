@@ -1,5 +1,6 @@
 # GithubSearch
 
+[screenshot](src/assets/images/Screenshot_2022-04-19_09-42-07.png)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
 
 ## Development server
