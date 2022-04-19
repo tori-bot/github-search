@@ -1,7 +1,7 @@
 img{
 border: solid white 2px;
 border-radius: 5px;
-margin-top: 5vh;
+margin-top: 10vh;
 margin-left: 3vw;
 }
 
@@ -10,9 +10,16 @@ content{
 }
 
 mat-card{
-    margin-top: 20vh;
-    margin-left: 5vw;
+    margin-top: 10vh;
+    margin-left:7vw;
     text-align: center;
+}
+h1{
+    margin:10vh 24vw;
+    font-size: 3em;
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium';
+    font-stretch: expanded;
 }
 
 #git{

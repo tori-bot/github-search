@@ -13,7 +13,12 @@ img{
     margin-left: 5vw;
     
     }
-    
+    h1{
+        font-size: 3em;
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium';
+    font-stretch: expanded;
+    }
     
     
     mat-card{
