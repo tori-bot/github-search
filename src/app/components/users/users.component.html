@@ -1,5 +1,17 @@
 
-<app-search-form></app-search-form>
+<!-- <app-search-form></app-search-form> -->
+
+<form #form='ngForm' (submit)='showUsers()' >
+    <mat-form-field id="form" appearance="fill">
+      <mat-label>Search</mat-label>
+      <input matInput type="search" search='ngModel' [(ngModel)]='user' />
+    </mat-form-field>
+    <button mat-raised-button color="primary"
+    type="submit">
+      <mat-icon>search</mat-icon>
+    </button>
+  </form>
+
   <div class="row">
       <div class="col-md-4" >
           <img src="{{moreDetails.avatar_url}} " alt="profile">

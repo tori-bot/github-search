@@ -1,1 +1,27 @@
-<app-search-form></app-search-form>
+<!-- <app-search-form></app-search-form> -->
+
+<form #form='ngForm' (submit)='getRepos()' >
+    <mat-form-field id="form" appearance="fill">
+      <mat-label>Search</mat-label>
+      <input required matInput type="search" #search='ngModel' [(ngModel)]='user' />
+    </mat-form-field>
+    <button mat-raised-button color="primary"
+    type="submit">
+      <mat-icon>search</mat-icon>
+    </button>
+  </form>
+
+  <div class="row">
+      <div class="col-nd-4" *ngFor='let repo of repositories'>
+          <div class="card">
+              <h2 class="card-title">{{repo.name}} </h2>
+              <div class="card-body">
+                 <p>{{repo.description}}</p> 
+                  <p>{{repo.language}}</p>
+                  <p>{{repo.forks}}</p>
+                  <p>{{repo.created_at |createdAt}}</p>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
