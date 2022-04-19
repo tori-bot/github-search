@@ -13,9 +13,9 @@ export class UserService {
   constructor(private http: HttpClient) {
   }
 
-  usersRequest(userName: any) {
+  usersRequest(username: any) {
     interface ApiResponse {
-      name: string,
+      name:string,
       login: string,
       avatar_url: string,
       bio: string,
@@ -29,7 +29,7 @@ export class UserService {
     
     return new Promise((resolve, reject) => {
       resolve(
-        this.http.get<ApiResponse>(`${environment.apiUrl}/users/${userName}/repos??access_token=${environment.apiKey}`).toPromise())
+        this.http.get<ApiResponse>(`${environment.apiUrl}/users/${username}??access_token=${environment.apiKey}`).toPromise())
     })
   }
 

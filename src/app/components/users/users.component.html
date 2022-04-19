@@ -12,17 +12,17 @@
     </button>
   </form>
 
-  <div class="row">
-      <div class="col-md-4" *ngFor="let more of moreDetails" >
-          <img src="{{more.avatar_url}} " alt="profile">
-          <h2>name: {{more.name}} </h2>
-          <h3>username: {{more.login}} </h3>
-          <p>bio: {{more.bio}} </p>
-          <p>email: {{more.email}} </p>
-          <p>Repos: {{more.public_repos}} </p>
-          <p>forks: {{more.forks}} </p>
-          <p>followers: {{more.followers}} </p>
-          <p>following: {{more.following}} </p>
+  <div class="row" [hidden]="searchResult">
+      <div class="col-md-4"  >
+          <img src="{{moreDetails.avatar_url}} " alt="profile">
+          <h2>name: {{moreDetails.name}} </h2>
+          <h3>username: {{moreDetails.login}} </h3>
+          <p>bio: {{moreDetails.bio}} </p>
+          <p>email: {{moreDetails.email}} </p>
+          <p>Repos: {{moreDetails.public_repos}} </p>
+          <p>forks: {{moreDetails.forks}} </p>
+          <p>followers: {{moreDetails.followers}} </p>
+          <p>following: {{moreDetails.following}} </p>
 
       </div>
   </div>

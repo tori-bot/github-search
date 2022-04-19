@@ -8,7 +8,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class AboutComponent implements OnInit {
   user: string='tori-bot'
-  moreDetails:any=[]
+  moreDetails:any
 
   constructor(private userService:UserService) { }
 

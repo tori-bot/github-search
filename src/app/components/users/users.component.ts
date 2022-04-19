@@ -8,13 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersComponent implements OnInit {
   user: any
-  moreDetails:any=[]
+  moreDetails: any = []
+  
+  searchResult=true
+  
 
   constructor(private userService:UserService) { }
 
  
 
   showUsers() {
+    this.searchResult = false;
     this.userService.usersRequest(this.user).then((response: any) => {
       console.log(response)
       this.moreDetails = response;
