@@ -1,3 +1,4 @@
+import { UserService } from 'src/app/services/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReposComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
+  user: any
+  repositories: any = []
+  
+  getRepos() {
+    this.userService.userRepos(this.user).then((response)=> {
+      this.repositories=response
+    }, err=>alert('Oops! User not found'))
+  }
+
 
   ngOnInit(): void {
   }

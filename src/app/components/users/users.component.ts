@@ -17,7 +17,7 @@ export class UsersComponent implements OnInit {
   showUsers() {
     this.userService.usersRequest(this.user).then((response: any) => {
       console.log(response)
-      this.moreDetails = response.data;
+      this.moreDetails = response;
       // catching errors
     }, err => {
       alert('User not found')
