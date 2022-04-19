@@ -13,24 +13,24 @@
       <mat-icon>search</mat-icon>
     </button>
   </form>
-
+<h1>User Profile</h1>
   
   <div class="row" [hidden]="searchResult">
    <div class="col-md-6" >
   <img src="{{moreDetails.avatar_url}} " alt="profile">
   </div> 
   <div class="col-md-6"  >
+    
         <mat-card>
-          <mat-card-title>name: {{moreDetails.name}}</mat-card-title>
+          <mat-card-title> {{moreDetails.name}}</mat-card-title>
               <mat-card-subtitle>username: {{moreDetails.login}} </mat-card-subtitle>
               <mat-card-content>
-                  <p>bio: {{moreDetails.bio}} </p>
+                  <p> {{moreDetails.bio}} </p>
   
   <p>Repos:{{moreDetails.public_repos}} </p><p>followers: {{moreDetails.followers}} </p>
   <p>following: {{moreDetails.following}} </p></mat-card-content>
  
-  
-  <a href="https://github.com/"+moreDetails.login><button id="git" mat-raised-button color="primary">On Github</button></a>
+
       </mat-card>
       </div>
   </div>
