@@ -22,6 +22,7 @@ import { ReposComponent } from './components/repos/repos.component';
 import { AboutComponent } from './components/about/about.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { CreatedAtPipe } from './pipes/created-at.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -51,7 +52,8 @@ import { CreatedAtPipe } from './pipes/created-at.pipe';
     MatInputModule,
     MatIconModule,
     MatCardModule,
-    MatSidenavModule
+    MatSidenavModule,
+    HttpClientModule
 
   ],
   providers: [

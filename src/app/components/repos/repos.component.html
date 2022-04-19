@@ -3,7 +3,7 @@
 <form #form='ngForm' (submit)='getRepos()' >
     <mat-form-field id="form" appearance="fill">
       <mat-label>Search</mat-label>
-      <input required matInput type="search" #search='ngModel' [(ngModel)]='user' />
+      <input required matInput name="search" type="search" #search='ngModel' [(ngModel)]='user' />
     </mat-form-field>
     <button mat-raised-button color="primary"
     type="submit">
